@@ -51,7 +51,7 @@ coords = "%f,%f,%f,%f" %(xmin, xmax, ymin, ymax)
 
 out1=processing.runalg('qgis:addfieldtoattributestable', sites,random_name,0,10.0,0.0,None)
 
-out2=processing.runalg('grass7:v.what.rast.points', out1['OUTPUT_LAYER'],classified,random_name,'1=1',False,coords,-1.0,0.0001,0,None)
+out2=processing.runalg('grass7:v.what.rast.points', out1['OUTPUT_LAYER'],classified,random_name,'1=1',False,coords,-1.0,0.0001,0,os.path.join(output_folder,"newpts.shp"))
 
 vlayer = QgsVectorLayer(out2['output'], random_name, "ogr")
 
