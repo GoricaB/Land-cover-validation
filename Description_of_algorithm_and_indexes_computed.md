@@ -2,7 +2,7 @@ Algorithm description
 This algorithm calculates many accuracy assessment indexes, global ones like:
 
 
-P0 - Overall accuracy \n
+P0 - Overall accuracy
 AUA - Average of user's accuracies 
 APA - Average of producer's accuracies 
 CSI - Classification success index 
