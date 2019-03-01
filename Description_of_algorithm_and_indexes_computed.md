@@ -88,18 +88,23 @@ Weighted kappa needs matrix of weights (weights_kappa) in case that some cells o
 In case that the weights are not given, the algorithm by default uses random matrix of 0s and 1s.
 If checked, option "Print example of a priory data" will give the csv output of the default (radom) matrix as an example how the matrix of weights should be. This can be modified according to the needs, and used as input.
 row membership probability
+
 Prior probabilitiy of a class membership. In the absence of specific information, they may all be set to 1/q, i.e. equal probability for each of the q classes. Tau can also be applied with any other prior assignment of classes, for example, an estimate of the distribution of soil classes based on a detailed map of a sample area.
 
 If checked, option "Print example of a priory data" will give the csv output of the equal prior class membership, 1/q (q-number of classes), as an example how it should be. This can be modified according to the needs, and used as input.
 column membership probability
+
 Prior probabilitiy of a class membership. In the absence of specific information, they may all be set to 1/q, i.e. equal probability for each of the q classes. Tau can also be applied with any other prior assignment of classes, for example, an estimate of the distribution of soil classes based on a detailed map of a sample area.
 
 If checked, option "Print example of a priory data" will give the csv output of the equal prior class membership, 1/q (q-number of classes), as an example how it should be. This can be modified according to the needs, and used as input.
+
 classess for GCSI
-Sometimes, instead of considering all the classess, one might be interested in classification success index of the specific classes. In this case, this parametar needs to be set in such a way to chose which are the classess of interest. For example, if the error matrix consists of 3 classess
-Forest, Water, Artificial area, respectively, and the classess of interest are Forest and Water, the classess of interest stored in classess_for_GCSI will be 1 and 2.
+
+Sometimes, instead of considering all the classess, one might be interested in classification success index of the specific classes. In this case, this parametar needs to be set in such a way to chose which are the classess of interest. For example, if the error matrix consists of 3 classessForest, Water, Artificial area, respectively, and the classess of interest are Forest and Water, the classess of interest stored in classess_for_GCSI will be 1 and 2.
 
 If checked, option "Print example of a priory data" will give the csv output of all ordinal number of the classes. This can be modified according to the needs,by deleting the ordinal number of the class user is not interested in and used as input.
 
+
 Algorithm author: Gorica Bratic and Monia Elisa Molinari
+
 Algorithm version: 1.0
