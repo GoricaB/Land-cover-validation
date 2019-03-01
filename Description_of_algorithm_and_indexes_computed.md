@@ -42,6 +42,7 @@ Aickin_alpha - Aickin's alpha
 k_cond_aver - Average of conditional kappa
 
 
+
 or indexes for individual class accuracy validation:
 
 
@@ -81,22 +82,26 @@ classified
 This is the raster data of the map that is classified and is to be validated by the tool
 
 output folder
+
 Folder in which all the outputs (error matrix, global indexes and local indexes) are going to be saved. This field must be filled to have results saved.
+
 Print example of a priori data
+
+
 weights kappa
+
+
 Weighted kappa needs matrix of weights (weights_kappa) in case that some cells of error matrix are considered more or less important than the others. The matrix of weights must have the same dimension as the error matrix .
 In case that the weights are not given, the algorithm by default uses random matrix of 0s and 1s.
 If checked, option "Print example of a priory data" will give the csv output of the default (radom) matrix as an example how the matrix of weights should be. This can be modified according to the needs, and used as input.
 row membership probability
 
-Prior probabilitiy of a class membership. In the absence of specific information, they may all be set to 1/q, i.e. equal probability for each of the q classes. Tau can also be applied with any other prior assignment of classes, for example, an estimate of the distribution of soil classes based on a detailed map of a sample area.
+Prior probabilitiy of a class membership. 
+
+In the absence of specific information, they may all be set to 1/q, i.e. equal probability for each of the q classes. Tau can also be applied with any other prior assignment of classes, for example, an estimate of the distribution of soil classes based on a detailed map of a sample area.
 
 If checked, option "Print example of a priory data" will give the csv output of the equal prior class membership, 1/q (q-number of classes), as an example how it should be. This can be modified according to the needs, and used as input.
 column membership probability
-
-Prior probabilitiy of a class membership. In the absence of specific information, they may all be set to 1/q, i.e. equal probability for each of the q classes. Tau can also be applied with any other prior assignment of classes, for example, an estimate of the distribution of soil classes based on a detailed map of a sample area.
-
-If checked, option "Print example of a priory data" will give the csv output of the equal prior class membership, 1/q (q-number of classes), as an example how it should be. This can be modified according to the needs, and used as input.
 
 classess for GCSI
 
