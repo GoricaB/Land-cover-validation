@@ -1,0 +1,81 @@
+Algorithm description
+
+This algorithm calculates many accuracy assessment indexes, global ones like:
+
+
+P0 - Overall accuracy 
+AUA - Average of user's accuracies 
+APA - Average of producer's accuracies 
+CSI - Classification success index 
+GCSI - Group classification success index 
+P0_marg - Overall accuracy after margfit 
+K - Standard (Cohen's) kappa 
+K_w - Weighted kappa 
+tau - tau index 
+AMI - Average mutual information 
+NMI_g - The geometric mean of the entropies on classified map and on reference data 
+NMI_m - the arithmetic mean of the maximum entropies on on classified map and on reference data 
+CAU - Combined user's accuracy 
+CAP - Combined producer's accuracy 
+D - Total disagreement 
+AD - Total allocation disagreement 
+QD - Total quantity disagreement 
+Aickin_alpha - Aickin's alpha 
+k_cond_aver - Average of conditional kappa
+
+or indexes for individual class accuracy validation:
+
+
+PA - Producer's accuracy 
+UA - User's accuracy 
+AUP - Average user's and producer's accuracy 
+ICSI - Individual Classification Success Index 
+MAH - Hellden's mean accuracy 
+MAS - Short's mapping accuracy 
+GT - Ground Truth Index 
+k_cond - Conditional kappa 
+qd - Quantity disagreement for each class 
+ad - Allocation disagreement for each class
+
+Input parameters
+
+sites
+This element is the vector point data, that are the sample data of the land cover. One of the fields in the attribute table of the point data must contain values of land cover categories present in vector layer. In case that the original data are not containing this field, it should be derived.
+
+sites field
+Is the field of the sample points data in which the values are representing land cover class. \nLand cover class value must be matching the land cover class value to be validated. When this is not the case either vector layer (points) must be adapted to the raster or raster values must be adapted to points values(reclassification)
+
+classified
+
+This is the raster data of the map that is classified and is to be validated by the tool
+
+output folder
+
+Folder in which all the outputs (error matrix, global indexes and local indexes) are going to be saved. This field must be filled to have results saved.
+
+Print example of a priori data
+
+weights kappa
+
+Weighted kappa needs matrix of weights (weights_kappa) in case that some cells of error matrix are considered more or less important than the others. The matrix of weights must have the same dimension as the error matrix .
+In case that the weights are not given, the algorithm by default uses random matrix of 0s and 1s.
+If checked, option "Print example of a priory data" will give the csv output of the default (radom) matrix as an example how the matrix of weights should be. This can be modified according to the needs, and used as input.
+
+row membership probability
+
+Prior probabilitiy of a class membership. In the absence of specific information, they may all be set to 1/q, i.e. equal probability for each of the q classes. Tau can also be applied with any other prior assignment of classes, for example, an estimate of the distribution of soil classes based on a detailed map of a sample area.
+If checked, option "Print example of a priory data" will give the csv output of the equal prior class membership, 1/q (q-number of classes), as an example how it should be. This can be modified according to the needs, and used as input.
+
+column membership probability
+
+Prior probabilitiy of a class membership. In the absence of specific information, they may all be set to 1/q, i.e. equal probability for each of the q classes. Tau can also be applied with any other prior assignment of classes, for example, an estimate of the distribution of soil classes based on a detailed map of a sample area.
+If checked, option "Print example of a priory data" will give the csv output of the equal prior class membership, 1/q (q-number of classes), as an example how it should be. This can be modified according to the needs, and used as input.
+
+classess for GCSI
+
+Sometimes, instead of considering all the classess, one might be interested in classification success index of the specific classes. In this case, this parametar needs to be set in such a way to chose which are the classess of interest. For example, if the error matrix consists of 3 classess
+Forest, Water, Artificial area, respectively, and the classess of interest are Forest and Water, the classess of interest stored in classess_for_GCSI will be 1 and 2.
+If checked, option "Print example of a priory data" will give the csv output of all ordinal number of the classes. This can be modified according to the needs,by deleting the ordinal number of the class user is not interested in and used as input.
+
+Algorithm author: Gorica Bratic and Monia Elisa Molinari
+Algorithm version: 1.0
